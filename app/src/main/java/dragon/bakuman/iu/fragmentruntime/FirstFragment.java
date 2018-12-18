@@ -33,7 +33,8 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Replace FirstFragment with SecondFragment
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new SecondFragment(), null).commit();
+                //without addToBackStack back button would simply close the app!
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new SecondFragment(), null).addToBackStack(null).commit();
             }
         });
 

@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //Replace HomeFragment with FirstFragment
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new FirstFragment(), null).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new FirstFragment(), null).addToBackStack(null).commit();
             }
         });
 
